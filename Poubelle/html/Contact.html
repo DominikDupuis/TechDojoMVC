@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styleAcceuil.css">
+    <link rel="stylesheet" href="../css/styleRejoindre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <title>CALENDA .</title>
+</head>
+
+<body>
+    <section class="navigation">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- <a class="navbar-brand" href="#"><img src="logo.svg"></a> -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./Acceuil.html"><img class="logo" src="../images/logo2.svg"
+                        alt='AGENDA .' /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="navbar-nav ml-auto">
+                        <a class="p-3 nav-item nav-link" href="./Acceuil.html">ACCUEIL</a>
+                        <a class="p-3 nav-item nav-link" href="./APropos.html">À PROPOS</a>
+                        <a class="p-3 nav-item nav-link active" href="./nousRejoindre.html">NOUS REJOINDRE</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="Contact">
+        <div class="container-fluid ">
+            <div class="row row-contact">
+                <div class="col-md-6 info-contact">
+                    <h1>CONTACT</h1>
+                    <hr class="separateur-contact" color="#ea9999">
+                    <ul class="liste-contact">
+                        <li>
+                            <h4>TÉLÉPHONE : </h4><span style="margin-left: 25px;">(514)-CAL-ENDA</span>
+                            <?php include('test.php') ?>
+                        </li>
+                        <li>
+                            <h4>EMAIL : </h4><span style="margin-left: 25px;">INFO@CALENDA.COM</span>
+                        </li>
+                        <li>
+                            <h4>ADRESSE : </h4><span style="margin-left: 25px;">6400 16e Avenue, Montréal, QC H1X 2S9</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 embed-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.648181402063!2d-73.58451768402084!3d45.55740247910219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91eace22b9bcf%3A0x18799aed17aa23d9!2sRosemont+College!5e0!3m2!1sen!2sca!4v1552674769507"
+                        width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="developpeurs">
+        <div class="container-fluid">
+            <div class="row info-developpeur">
+                <div class="col-md-4 cv-felix">
+                    <a href="../html/felixCV.html" target="_blank">
+                        <img class="image-cv-felix" src="../images/Annotation 2019-03-15 175838.png">
+                    </a>
+                </div>
+                <div class="col-md-8 box-description">
+                    <h1 class="titre-developpeur1">Félix Bonneville-Tellier</h1>
+                    <hr>
+                    <p class="description-developpeur">
+                        Félix est un des deux développeurs de <span style="color: #ea9999;">Calenda. </span>
+                        Jeune étudiant en informatique du collège Rosemont, il vise une carrière en développement.
+                        Intérêt marqué pour le design en particulier.
+                    </p>
+                </div>
+            </div>
+            <div class="row info-developpeur">
+                <div class="col-md-4 cv-dominik">
+                    <a href="../html/dominikCV.html" target="_blank">
+                        <img class="image-cv-felix" src="../images/Annotation 2019-03-16 230435.jpg">
+                        </a>
+                </div>
+                <div class="col-md-8 box-description">
+                    <h1 class="titre-developpeur1">Dominik Dupuis</h1>
+                    <hr>
+                    <p class="description-developpeur">
+                        Dominik est le deuxième développeur de <span style="color: #ea9999;"> Calenda. </span>
+						Étudiant du collège de Rosemont en informatique, il désire se perfectionner et s'améliorer au niveau du développement d'application.
+						Intérêt pour le développement orienté-objet.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer font-small footer-calenda">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 btn-social">
+                        
+                        <a class="btn btn-social-icon btn-facebook">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-twitter">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-instagram">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> calenda.com</a>
+        </div>
+    </footer>
+</body>
+
+</html>

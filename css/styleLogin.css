@@ -1,0 +1,153 @@
+.nimporteQuoi {
+    color: #ea9999 #CBE896 #E8DAB2 #def2c8 #c5dac1 #2c4251;
+}
+
+body {
+    font-family: 'Oswald', sans-serif !important;
+	height : 100%;
+}
+
+h1 {
+    color: #ea9999;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+h4 {
+    margin: 20px;
+    color: #ea9999;
+}
+
+hr {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    overflow: visible;
+    /* For IE */
+    margin-top: 20px;
+    border: none;
+    border-top: medium double;
+    text-align: center;
+    color: #ea9999;
+}
+
+.logo {
+    height: 20rem;
+}
+
+.navbar {
+    padding: 0px !important;
+    background-color: #ea9999;
+    /* background-color: #2c4251; */
+}
+
+.jumbotron {
+    background-color:black;
+    border: 2px white !important;
+    margin-bottom: 0;
+	overflow:auto;
+	padding-bottom:170px;
+}
+
+.container-fluid {
+    /* background-color: #ea9999; */
+}
+
+.nav-link:hover {
+    color: white !important;
+    font-weight: bold;
+}
+
+.active {
+    color: white !important;
+    font-weight: bold !important;
+    /* text-decoration: underline overline; */
+}
+
+.nav-link {
+    color: #CBE896 !important;
+    padding: 2rem !important;
+    font-size: 20px !important;
+    /* font-family: 'Major Mono Display', monospace !important; */
+    /* font-family: 'Oswald', sans-serif; */
+}
+
+.navbar-toggler {
+    border: #CBE896 !important;
+    margin-left: 15px;
+}
+
+/* Effet visuel sur le .navbar-brand */
+
+.navbar-brand:hover {
+    background-image: url(../images/logo2.svg);
+}
+
+.avantages {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.img-avantage {
+    width: 50%;
+    height: auto;
+}
+
+.footer-calenda {
+    background-color: #ea9999;
+    color: #CBE896;
+    text-align: center;
+	
+	
+}
+
+.btn-social {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.calenda-ref {
+    color: #ea9999;
+}
+
+.description-avantage {
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+    text-align: start;
+}
+
+/* .fonctionnement {
+    background-color: #CBE896 !important;
+}
+  */
+.carousel {
+    margin: 4rem;
+}
+
+.box-propos {
+    margin-top: 2rem;
+}
+
+.p-propos {
+    margin: 2rem;
+}
+
+th {
+  text-align: center !important;
+}
+
+th:nth-last-of-type(1),td:nth-last-of-type(1),th:nth-last-of-type(7),td:nth-last-of-type(7) {
+    color: red;
+}
+
+td {
+    height: 80px !important;
+}
+
+.today {
+    background-color: #ea9999 !important;
+}
