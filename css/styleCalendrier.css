@@ -1,0 +1,126 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: bold;
+}
+
+.date-button{
+    display: none;
+}
+
+table, th, tr {
+    border: 2px solid black !important;
+    empty-cells: show;
+}
+
+th {
+    text-align: center !important;
+    background-color: #006494;
+    color: white !important;
+}
+
+table tr th:nth-last-of-type(1), table tr th:nth-last-of-type(7) {
+    width: 5% !important;
+}
+
+td:nth-last-of-type(1), td:nth-last-of-type(7) {
+    color: #A52C2C;
+}
+
+/*Style des boutons de navigation*/
+.btn-prev-next {
+    background-color: #006494 !important;
+    margin-top: -2.4vh;
+    margin-left: 1vw;
+    padding: 20px;
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: top;
+    color: #E8F1F2;
+    justify-content: center;
+}
+
+.legende-calendrier {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+/*Style des disponibilité*/
+.dispo {
+    height: auto;
+    line-height: auto;
+    width: auto;
+    border-radius: 10%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 15px;
+    color: white !important;
+    cursor: pointer;
+    border: 2px solid white !important;
+    text-decoration: none;
+    align-content: center;
+    padding: 1rem;
+}
+
+.dispo-non {
+    background-color: #A52C2C;
+}
+
+.dispo-non:hover {
+    background-color: white;
+    color: #A52C2C !important;
+    border: 2px solid #A52C2C !important;
+}
+
+.dispo-oui {
+    background-color: #9BCCA7;
+}
+
+.dispo-oui:hover {
+    background-color: white;
+    color: #9BCCA7 !important;
+    border: 2px solid #9BCCA7 !important;
+}
+
+.dispo-pt {
+    background-color: #E3B505;
+}
+
+.dispo-pt:hover {
+    background-color: white;
+    color: #E3B505 !important;
+    border: 2px solid #E3B505 !important;
+}
+
+/*Style du calendrier lui même*/
+.table-calendrier {
+    margin-left: 10vh;
+    margin: 4rem 0px 5rem 9.5vw;
+    width: 80vw;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+}
+
+.titre-calendrier{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.jour{
+    border: 2px solid black;
+}
+ 
+

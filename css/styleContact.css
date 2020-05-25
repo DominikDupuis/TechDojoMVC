@@ -1,0 +1,162 @@
+/*Style navbar avec fond*/
+.navigation{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: #13293D;
+    z-index: 9999;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 70px;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+/*Style date-picker avec fond*/
+.date-picker{
+    display: block;
+    background:rgba(255,255,255,.1);
+}
+
+.date-button{
+    display: block;
+}
+
+.sommaire{
+    text-align: center;
+}
+
+/*Quelques ajustement comparer a style*/
+.sommaire-accueil{
+    padding-top: 15vh;
+    width: 50vw;
+    display: inline-block;
+    color: #E8F1F2;
+    font-size: 18px;
+}
+
+.sommaire-accueil h1{
+    font-size: 42px;
+}
+
+.row-avantages{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+}
+
+.box-avantage{
+    width: 30vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+
+}
+
+.techdojo-ref{
+    color: #006494;
+}
+
+.contact{
+    margin-top: 70px;
+    padding-left:1vw;
+}
+
+.row-contact{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.embed-map{
+    justify-content: flex-end;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    padding-right: 5vw;
+}
+
+iframe{
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+}
+
+.info-contact{
+    text-align: center;
+}
+
+.liste-contact{
+    text-align: left;
+}
+
+
+
+.row-info-developpeur{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cv-dominik{
+    display: flex;
+}
+
+.image-cv{
+    width: 100%;
+    height: auto;
+    text-align: end;
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.65);
+    margin-top: 20px;
+    margin-left: 1vw;
+}
+
+.description-developpeur {
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.titre-developpeur{
+    text-align: center;
+}
+
+.box-description{
+    padding-left: 2vw;
+}
+
+.footer{
+    position: fixed;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+    .developpeur{
+        margin-bottom:15vh;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .fa{
+        margin-top:2.6vh;
+    }
+
+    .foot-link{
+        padding-top:3vh;
+        width: 18vw;
+    }
+}

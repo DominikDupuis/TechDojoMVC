@@ -1,0 +1,73 @@
+/*Mettre la section en bas de la navbar*/
+.booking{
+    margin-top: 10vh;
+}
+
+.date-booking{
+    text-align: center;
+}
+
+.date-picker{
+    display: block;
+}
+
+.input-name{
+    margin-left:0.6vw;
+}
+
+/*Style des messages d'erreur ou réussite*/
+.messages{
+    margin-top: 5vh;
+    margin-left: 7.5vh;
+    justify-content: center;
+    color: black;
+    background: transparent;
+    width:80%;
+}
+
+/*Modification des boutons*/
+.bouton-book,.bouton-cancel{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+  
+.row-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2vw;
+    
+}
+
+form{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.modal{
+    display: block;
+}
+
+/*Style du formulaire*/
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    height: 40%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.22);
+}
+
+@media only screen and (orientation: landscape) {
+    .date-booking{
+        font-size: 30px;
+    }
+    .modal-content{
+        height: 70%;
+    }
+    .messages{
+        height: 10vh;
+    }
+}

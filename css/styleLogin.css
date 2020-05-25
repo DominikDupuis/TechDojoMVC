@@ -1,153 +1,248 @@
-.nimporteQuoi {
-    color: #ea9999 #CBE896 #E8DAB2 #def2c8 #c5dac1 #2c4251;
-}
-
-body {
-    font-family: 'Oswald', sans-serif !important;
-	height : 100%;
-}
-
-h1 {
-    color: #ea9999;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Oswald', sans-serif;
-    color: white;
-}
-
-h4 {
-    margin: 20px;
-    color: #ea9999;
-}
-
-hr {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    overflow: visible;
-    /* For IE */
-    margin-top: 20px;
-    border: none;
-    border-top: medium double;
-    text-align: center;
-    color: #ea9999;
-}
-
-.logo {
-    height: 20rem;
-}
-
-.navbar {
-    padding: 0px !important;
-    background-color: #ea9999;
-    /* background-color: #2c4251; */
-}
-
-.jumbotron {
-    background-color:black;
-    border: 2px white !important;
-    margin-bottom: 0;
-	overflow:auto;
-	padding-bottom:170px;
-}
-
-.container-fluid {
-    /* background-color: #ea9999; */
-}
-
-.nav-link:hover {
-    color: white !important;
-    font-weight: bold;
-}
-
-.active {
-    color: white !important;
-    font-weight: bold !important;
-    /* text-decoration: underline overline; */
-}
-
-.nav-link {
-    color: #CBE896 !important;
-    padding: 2rem !important;
-    font-size: 20px !important;
-    /* font-family: 'Major Mono Display', monospace !important; */
-    /* font-family: 'Oswald', sans-serif; */
-}
-
-.navbar-toggler {
-    border: #CBE896 !important;
-    margin-left: 15px;
-}
-
-/* Effet visuel sur le .navbar-brand */
-
-.navbar-brand:hover {
-    background-image: url(../images/logo2.svg);
-}
-
-.avantages {
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.img-avantage {
-    width: 50%;
-    height: auto;
-}
-
-.footer-calenda {
-    background-color: #ea9999;
-    color: #CBE896;
-    text-align: center;
+/*Style de la section*/
+.centre{
+    display: flex;
+    background: #E8F1F2;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 85vh;
 	
+
+}
+
+
+/*Style du formulaire*/
+.connexion{
+    align-self: center;
+    width: 500px;
+    padding: 30px;
+    background: #FFFFFF;
+    margin-top: 5vh;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:720px;
+    position:relative;
+	background: url(../images/login.jpg) no-repeat center;
+	border-radius: 15px;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:74%;
+	height:83.5%;
+	position:absolute;
+	padding:70px 70px 50px 70px;
+	border-radius: 15px;
+	background:rgba(40,57,101,.9);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+/*Style des tabs du formulaire*/
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+
+/*Style du formulaire dans la zone*/
+.login-form{
+	min-height:200px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+	padding-left: 1.2em;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+	text-decoration: none;
+	color: #E8F1F2;
+    
+}
+
+a{
+	color: #e8F1F2;
+	text-decoration: none;
+}
+
+
+.middle-section{
+    margin-bottom: 3.5vh;
+}
+
+/* This is our style for the invalid fields */
+input:invalid{
+	border-color: #900;
+	background-color: #FDD;
+}
+  
+  input:focus:invalid {
+	outline: none;
+}
+  
+/* This is the style of our error messages */
+.error {
+	width  : 100%;
+	padding: 0;
+  
+	font-size: 80%;
+	color: rgb(250, 146, 146);
+	border-radius: 0 0 5px 5px;
+  
+	box-sizing: border-box;
+}
+  
+.error.active {
+	padding-left: 1.2em;
+}
+
+.messages{
+	display: none;
+	justify-content: flex-end;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+    height: 7vh;
+}
+
+.message-field{
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	
 }
 
-.btn-social {
-    padding: 0px !important;
-    margin: 0px !important;
+.alert-danger{
+    padding: 1.2em;
+    background: rgb(250, 146, 146);
+    border: 1px black solid;
+    border-radius: 15px;
+    padding-bottom: 2vh;
 }
 
-.calenda-ref {
-    color: #ea9999;
+.error{
+	font-size: 16px;
+}
+.active{
+	background: none;
 }
 
-.description-avantage {
-    margin-bottom: 4rem;
-    margin-left: 2rem;
-    text-align: start;
-}
-
-/* .fonctionnement {
-    background-color: #CBE896 !important;
-}
-  */
-.carousel {
-    margin: 4rem;
-}
-
-.box-propos {
-    margin-top: 2rem;
-}
-
-.p-propos {
-    margin: 2rem;
-}
-
-th {
-  text-align: center !important;
-}
-
-th:nth-last-of-type(1),td:nth-last-of-type(1),th:nth-last-of-type(7),td:nth-last-of-type(7) {
-    color: red;
-}
-
-td {
-    height: 80px !important;
-}
-
-.today {
-    background-color: #ea9999 !important;
+@media only screen and (orientation: landscape) {
+    .centre{
+		height: 100vh;
+		padding-top: 6vh;
+	}
 }

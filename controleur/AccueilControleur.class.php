@@ -1,10 +1,10 @@
 <?php
 require_once('./controleur/Action.interface.php');
-require_once('./view/Page.class.php');
+require_once('./vues/Page.class.php');
 
 class AccueilControleur implements Action {
 	public function execute(){
-		return new Page("accueil", "CALENDA. - Accueil", null, null);
+		return new Page("accueil", "TechDojo - Accueil", null, null);
 	}
 }
 ?>

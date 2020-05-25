@@ -1,0 +1,39 @@
+/*Quelques ajustement pour la page*/
+.modal-content{
+    width: 40%;
+    height: 65%;
+}
+
+#datepicker_rdv{
+    width: 99%;
+    padding:1em;
+    margin-left: 0.6em;
+}
+
+select{
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:1.2em;
+    padding:1em;
+    border:1px !important;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.messages{
+    margin-left:4vw;
+    height: 8vh;
+}
+
+/*Style pour appareil en landscape*/
+@media only screen and (orientation: landscape) {
+    .date-booking{
+        font-size: 30px;
+    }
+    .modal-content{
+        height: 100%;
+    }
+    .messages{
+        height: 10vh;
+    }
+}

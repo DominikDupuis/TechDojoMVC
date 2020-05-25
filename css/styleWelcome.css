@@ -1,0 +1,354 @@
+/*Style pour la première section*/
+.user-welcome{
+    margin-top: 70px;
+    width: 100vw;
+    height: 10vh;
+    background: #E8F1F2;
+}
+
+.bienvenue-message{
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+    text-align: center;
+    font-size:  40px;
+}
+
+.modifier-compte{
+    height: 8vh;
+    padding-left: 2.5vw;
+    padding-right: 4vw;
+    display: flex;
+    justify-content: space-evenly;
+    background: #E8F1F2;
+}
+
+/*Style pour les messages*/
+.messages{
+    display: none;
+    justify-content: center;
+    padding-bottom: 1vh;
+    width: 100vw;
+    height: 7vh;
+    background: #E8F1F2;
+}
+
+.alert-danger{
+    padding: 1.2em;
+    background: rgb(250, 146, 146);
+    border: 1px black solid;
+    border-radius: 15px;
+    padding-bottom: 2vh;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.alert-success{
+    padding: 1.2em;
+    background: rgb(151, 243, 159);
+    border: 1px black solid;
+    border-radius: 15px;
+    padding-bottom: 2vh;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+/*Style pour le tableau*/
+.tableau-rdv{
+    margin-top:3vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.rdv-table{
+    margin-bottom:15vh;
+    border: 3px solid #13293D;
+    border-radius: 15px;
+    width: 20%;
+
+}
+
+.rdv-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #13293D;
+    color: white;
+    font-weight: normal;
+  }
+
+.rdv-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.rdv-table tr:hover {background-color: #ddd;}
+
+
+
+
+
+/* Full-width input fields */
+.input-name, input[type=password], input[type=email] {
+    background:rgba(255,255,255,.1);
+    width: 96%;
+    margin: 8px 0;
+    display: inline-block;
+    border:none;
+	padding:15px 20px;
+    border-radius:25px;
+    color: #E8F1F2;
+	
+}
+
+input[type=password]{
+    -webkit-text-security:circle;
+}
+
+label{
+    padding-left: 0.8em;
+}
+  
+/* Set a style for all buttons */
+button {
+    background:#1161ee;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius:25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+
+.bouton-change{
+    margin-left: 3vw;
+    width: 80%;
+}
+
+#btnChangeMdp,#btnChangeUser,#btnChangeEmail{
+    width: auto;
+}
+  
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #fa3c2e;
+  }
+  
+.container {
+    padding: 16px;
+    padding-right: 39px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#bottom-container {
+    background:rgb(26, 37, 65);
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background:rgb(40, 57, 101);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    color:rgb(223, 223, 223);
+	font-size:16px;
+}
+  
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.3s;
+    animation: animatezoom 0.3s
+}
+
+.drop-down-user{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    background: #2c3e50;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+.select{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    line-height: 2;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+    color: #1161ee;
+}
+
+.form-rdv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Style des boutons*/
+.bouton-rdv{
+    margin-top:2vh;
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+    background:#1161ee;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius:25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.bouton-modifier{
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+    background:#1161ee;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius:25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
+/*Style pour les cellulaires*/
+@media screen and (min-width: 768px) {
+    .modal-content{
+        width: 45%;
+        font-size:25px;
+    }
+
+    .bouton-change{
+        width: 92%;
+        font-size:25px;
+    }
+
+    button{
+        font-size:20px;
+    }
+
+    .rdv-table{
+        width: 100%;
+    }
+}
+
+/*Style en mode landscape*/
+@media only screen and (orientation: landscape) {
+    .user-welcome{
+        height: 20vh;
+    }
+
+    .modifier-compte{
+        height: 20vh;
+    }
+
+    .alert-success{
+        padding:0;
+        padding-left:1em;
+        padding-right:1em;
+    }
+
+    .alert-danger{
+        padding:0;
+        padding-left:1em;
+        padding-right:1em;
+    }
+}

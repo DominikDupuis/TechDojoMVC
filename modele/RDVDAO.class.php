@@ -1,62 +1,100 @@
 <?php 
-    require_once('./modele/Database.class.php');
+    require_once('./modele/classes/Database.class.php');
+    require_once('./modele/UtilisateurDAO.class.php');
 
     class RDVDAO {
         static private $listeRDV = array();
+        static private $listeStatus = array();
 
-        //public static function getRDV($calendrier) {
-        public static function getRDVMois($mois) {
+        //On vas prendre tout les rendez-vous du mois.
+        public static function getRDVMois($mois, $annee) {
             self::$listeRDV = array();
             
             try {
-                $bdd = Database::getInstance();
+                $db = Database::getInstance();
             } catch (Exception $e) {
                 die("Erreur : " . $e->getMessage());
             }
-            //$sql = 'SELECT * FROM rdv';
-            $sql = 'SELECT * FROM rdv WHERE MONTH(`dateHeure`)='. $mois;
+            $sql = 'SELECT * FROM rdv WHERE MONTH(`dateRdv`)='. $mois .' AND YEAR(`dateRdv`)=' .$annee;
             
-            //echo 'DEMANDE : '. $sql;
-            $req = $bdd->query($sql);
+            $req = $db->query($sql);
             while($d = $req->fetch(PDO::FETCH_OBJ)) {
-                $nom = $d->dateHeure;
-                array_push(self::$listeRDV, $d->dateHeure);
+                array_push(self::$listeRDV, $d->dateRdv);
             }
 
             return self::$listeRDV;
         }
 
+        //Fonction pour avoir les rendez-vous d'un usager en particulier
+        public static function getRDVUser($user){
+            self::$listeRDV = array();
+            self::$listeStatus = array();
+            $db = Database::getInstance();
+            $p = new UserDAO();
+            $row = $p::findUser($user);
+            $userId= $row['id'];
+            $sql = 'SELECT * FROM rdv WHERE ClientID = '.$userId .' ORDER BY dateRdv';
+            $req = $db->query($sql);
+            while($d = $req->fetch(PDO::FETCH_OBJ)){
+                array_push(self::$listeRDV, $d->dateRdv);
+                array_push(self::$listeStatus, $d->Statut);
+                $c = array_combine(self::$listeRDV, self::$listeStatus);
+            }
+            if(isset($c)){
+                return $c;
+            }else{
+                return null;
+            }
+
+            
+        }
+
+        //Fonction afin de changer un rendez-vous dans la base de donnée.
+        public static function changerRdv($newRdv, $currentRdv, $newStatut){
+            $db = Database::getInstance();
+            $user = $_SESSION['username'];
+            $pstmt = $db->prepare("UPDATE rdv SET dateRdv = :x, statut = :y WHERE dateRdv = :z");
+            $result = $pstmt->execute(array(':x' => $newRdv, ':y' => $newStatut, ':z' => $currentRdv));
+            if($result)
+            {
+                $pstmt->closeCursor();
+                return $result;
+            }
+            $pstmt->closeCursor();
+            return null;
+        }
+
+        //Fonction afin de supprimer un rendez-vous dans la base de donnée.
+        public static function supprimerRdv($Rdv){
+            $db = Database::getInstance();
+            $user = $_SESSION['username'];
+            $pstmt = $db->prepare("DELETE FROM rdv WHERE dateRdv = :x");
+            $result = $pstmt->execute(array(':x' => $Rdv));
+            if($result)
+            {
+                $pstmt->closeCursor();
+                return $result;
+            }
+            $pstmt->closeCursor();
+            return null;
+        }
+
+        //On vas prendre tout les rendez-vous du jour.
         public static function getRdvJour($jours, $mois) {
             self::$listeRDV = array();
 
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=calendrier;charset=utf8', 'root', 'root');
+                $db = Database::getInstance();
             } catch (Exception $e) {
                 die("Erreur : " . $e->getMessage());
             }
-            //$sql = 'SELECT * FROM rdv';
-            $sql = 'SELECT * FROM rdv WHERE MONTH(`dateHeure`)='. $mois .' AND DAY(`dateHeure`)='. $jours;
+            $sql = 'SELECT * FROM rdv WHERE MONTH(`dateRdv`)='. $mois .' AND DAY(`dateRdv`)='. $jours;
             
-            //echo 'DEMANDE : '. $sql;
-            $req = $bdd->query($sql);
+            $req = $db->query($sql);
             while($d = $req->fetch(PDO::FETCH_OBJ)) {
-                $nom = $d->dateHeure;
                 array_push(self::$listeRDV, $d->dateHeure);
             }
             
             return self::$listeRDV;
         }
-
-        // public static function getRdvDuMois($calendrier) {
-        //     $liste_rdv = self::getRDV($calendrier);
-        //     $rdv_formatte = [];
-        //     print_r($liste_rdv);
-        //     foreach($liste_rdv as $rdv) {
-        //         array_push($rdv_formatte, date("d-H", strtotime($rdv))); 
-        //     }
-        //     //print_r($liste_rdv);
-        //     //print_r($rdv_formatte);
-        //     //echo '<p>'.date("m-h", strtotime($liste_rdv[0]));
-        //    return $rdv_formatte;
-        // }
     }
